@@ -1,0 +1,421 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 30px;
+    /* Reduced padding from 15px to 8px */
+    background-color: #1a1a1a;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav__toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Show toggle button in small screens */
+@media screen and (max-width: 768px) {
+    .nav__toggle {
+        display: block;
+    }
+}
+
+/* Logo */
+.nav__logo {
+    flex: 0 0 auto;
+}
+
+.nav__logo img {
+    width: 70px;
+    /* Reduced from 60px to 40px */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Navbar Links */
+.nav__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex: 0 1 auto;
+    gap: 40px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+
+.nav__item {
+    display: inline;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: #d32f2f;
+}
+
+/* Social Icons */
+.nav__social {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.nav__icon {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.nav__icon:hover {
+    color: #d32f2f;
+    transform: scale(1.2);
+}
+
+/* Sections */
+section {
+    padding: 100px 20px;
+    margin-top: 80px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+    padding: 0 20px;
+    box-shadow: none;
+    background: none;
+}
+
+.home__information {
+    max-width: 600px;
+}
+
+.home__present {
+    font-size: 20px;
+    color: pink;
+    margin-bottom: 17px;
+}
+
+.home__title {
+    font-size: 48px;
+    margin: 10px 0;
+    color: white;
+}
+
+.home__skill {
+    font-size: 24px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Download CV Button */
+/* Download CV Button */
+.cv-button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 24px;
+    /* Adjusted for readability */
+    font-weight: normal;
+    color: white;
+    /* White text */
+    background-color: blue;
+    /* Deep blue background */
+    padding: 12px 30px;
+    /* Adjusted padding */
+    border: none;
+    /* No border */
+    border-radius: 6px;
+    /* Smooth rounded corners */
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    /* Adjust spacing */
+}
+
+/* Button Hover Effect */
+.cv-button:hover {
+    background-color: green;
+    /* Slightly darker blue on hover */
+    transform: scale(1.05);
+    /* Small zoom effect */
+}
+
+/* Button Active (When clicked) */
+.cv-button:active {
+    transform: scale(0.98);
+    /* Slight press effect */
+}
+
+
+/* About Section */
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: pink;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+/* Skills Section */
+.skills h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: pink;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+/* Contact Section */
+/* Contact Form Styling */
+.contact-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #222;
+    border-radius: 10px;
+    width: 400px;
+    margin: 80px auto;
+    /* Moves the section down */
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Styling form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #333;
+    color: #fff;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 80px;
+}
+
+.contact-form button {
+    background: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #e6b800;
+}
+
+/* Contact details */
+.contact-details {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.contact-details a {
+    color: #4db8ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.contact-details i {
+    margin-right: 5px;
+    color: #ff4081;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #ccc;
+    margin-top: 55px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .nav__list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1a1a1a;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav__list.show-menu {
+        display: flex;
+    }
+
+    .nav__toggle {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 24px;
+    }
+
+    .home__title {
+        font-size: 36px;
+    }
+
+    .home__skill {
+        font-size: 18px;
+    }
+
+    .about h2,
+    .skills h2,
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    .about p,
+    .skills li,
+    .contact p {
+        font-size: 16px;
+    }
+}
+
+.projects {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Flexbox for horizontal layout */
+.project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* Space between projects */
+    flex-wrap: nowrap;
+    /* Prevents wrapping */
+    overflow-x: auto;
+    /* Allows horizontal scrolling if needed */
+    padding: 10px;
+}
+
+.project {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    /* Fixed width for each project */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    flex: 0 0 auto;
+    /* Ensures fixed width and no shrinking */
+}
+
+.project:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect */
+}
+
+.project img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project h3 {
+    font-size: 1.3rem;
+    color: #ffcc00;
+    margin-top: 10px;
+}
+
+.project p {
+    color: #ddd;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.project a {
+    color: #4db8ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
